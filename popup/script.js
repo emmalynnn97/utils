@@ -40,21 +40,20 @@ class Cookie {
         if (user != "") { return true } //if cookie is set, return true
         else { return false } //if cookie is not set, return false
     }
+    printCookie = () => {
+        console.log("Cookie Debug Log", "\nName", this.name, "\nValue:", this.value, "\nExpiration Days:", this.numDays)
+    }
 }
 
 //Initial amount of time in ms before the popup becomes visible
 const initialDelay = 2000;
-//A toggle for the cookie functionality of the popup
-const hasCookies = true;
 
-const myCookie = new Cookie(30, "username", "user");
+const myCookie = new Cookie(25, "username", "user");
 
 // Method to close the modal
 const closeModal = () => {
     modal.style.display = "none";
-    if (hasCookies) {
-        myCookie.setCookie()
-    }
+    myCookie.setCookie()
 }
 // Get the modal
 const modal = document.querySelector("#emma-utils-modal");
