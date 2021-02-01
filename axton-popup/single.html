@@ -1,0 +1,43 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axton Popup</title>
+    <link rel="stylesheet" href="single-style.css">
+</head>
+
+<body>
+    <a onClick="eraseCookies()" class="erase-button">Erase Cookies</a>
+    <div id="emma-utils-modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-inner">
+                <form action='https://axton-form-server.herokuapp.com/contact' method='POST' class="axton-form">
+                    <span>
+                        General Information Contact Form
+                    </span>
+                    <label class="axton-label">
+                        <span>Full Name: *</span>
+                        <input required type="text" name='name' id='name'/>
+                    </label>
+                    <label class="axton-label">
+                        <span>Email Address: *</span>
+                        <input required type="email" name="email" id="email"/>
+                    </label>
+                    <label class="axton-label">
+                        <span>Phone: *</span>
+                        <input required type="phone" name="phone" id="phone"/>
+                    </label>
+                    <label class="axton-label">
+                        <span>Subject:</span>
+                        <input type="text" name="subject" id="subject"/>
+                    </label>
+                    <label class="axton-label">
+                        <span>How may we help you? *</span>
+                        <textarea required type="text" name="message" id="message"></textarea>
+                    </label>
+                    <input id="axton-submit" type="submit" value="Submit"/>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+</body>
