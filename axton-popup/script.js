@@ -48,7 +48,7 @@ class Cookie {
 //Initial amount of time in ms before the popup becomes visible
 const initialDelay = 2000;
 
-const myCookie = new Cookie(25, "username", "user");
+const myCookie = new Cookie(0, "username", "user");
 
 // Method to close the modal
 const closeModal = () => {
@@ -61,17 +61,14 @@ const modal = document.querySelector("#emma-utils-modal");
 // Get the close button
 const closeBtn = document.querySelector(".modal-close");
 
-const eraseBtn = document.querySelector('.erase-button');
+const submitBtn = document.querySelector('#axton-submit')
 
-eraseBtn.addEventListener('click', myCookie.eraseCookies)
-//Add an event listener to the window which waits initialDelay ms before triggering the modal
-window.addEventListener('load', () => {
-    if (!myCookie.checkCookie()) {
-        setTimeout(function () {
-            modal.style.display = "block";
-        }, initialDelay);
-    }
+submitBtn.addEventListener('click',(e)=>{
+    e.preventDefault();
+    document.querySelector('.axton-form').submit();
+    closeModal();
 })
+
 //Add an event listener to the close button which closes the modal on click
 closeBtn.addEventListener('click', closeModal);
 

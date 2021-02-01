@@ -1,3 +1,45 @@
+*,*::before,*::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+.axton-label{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin:.25em auto;
+}
+.axton-label > span{
+    color:red;
+}
+.axton-label > input{
+    height:25px;
+    width:200px;
+}
+.axton-label > textarea{
+    height:50px;
+    width:200px;
+}
+.axton-form > input[type="submit"]{
+    padding:.25em 1em;
+    font-size:1em;
+    background:transparent;
+    cursor:pointer;
+    transition:.25s ease;
+}
+.axton-form > input[type="submit"]:hover{
+    transform:scale(1.06);
+}
+.axton-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.axton-form > span{
+    font-size: 1.5em;
+}
 /* The Modal (background) */
 #emma-utils-modal {
     display: none;
@@ -17,12 +59,12 @@
     font-size: 30px;
     font-weight: 500;
     position:absolute;
-    top:0;
-    right:0;
+    top:.25em;
+    right:.5em;
     }
     .modal-close:hover,
     .modal-close:focus {
-    color: #111F2E;
+    color: red;
     text-decoration: none;
     cursor: pointer;
 }
@@ -40,17 +82,20 @@
 .modal-content {
     position: relative;
     margin: 7% auto;
-    height:750px;
+    height:600px;
     width: 40%;
     animation-name: animatetop;
     animation-duration: .75s;
 }
 /* Inner Modal Content Styling */
 .modal-inner {
-    background-color:rgb(255, 245, 255);
+    background-color:rgb(228, 228, 228);
     height:80%;
     width:100%;
     padding:1em;
+    display:flex;
+    justify-content: center;
+    align-items:center;
 }
 /* Add Animation */
 @keyframes animatetop {
@@ -61,16 +106,15 @@
 /* Selectors and styles affecting screens UP TO 1024px (Large Tablet/Desktop) */
 .modal-content{
     width:50%;
-    height:900px;
 }
 }
 @media (max-width: 768px) {
 /* Selectors and styles affecting screens UP TO 768px (Small Tablet) */
-   .modal-content{   
-    height:700px;
-   }
+   
 }
 @media (max-width: 500px) {
 /* Selectors and styles affecting screens UP TO 480px (Phone) */
-
+    .modal-content{
+        width:75%;
+    }
 }
