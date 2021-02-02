@@ -48,7 +48,7 @@ class Cookie {
 //Initial amount of time in ms before the popup becomes visible
 const initialDelay = 2000;
 
-const myCookie = new Cookie(25, "username", "user");
+const myCookie = new Cookie(15, "username", "user");
 
 // Method to close the modal
 const closeModal = () => {
