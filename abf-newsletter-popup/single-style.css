@@ -1,0 +1,140 @@
+.modal-left-overlay{
+    box-sizing: border-box;
+}
+/* The Modal (background) */
+#emma-utils-modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.abf-popup-form{
+    display: flex;
+    flex-direction: column;
+    height:100%;
+    justify-content: center;
+    align-items: center;
+}
+.abf-popup-form > div > div{
+    display: flex;
+    flex-direction: column;
+    margin:1em auto;
+}
+.abf-popup-form > div > div > label{
+    color:#F07241;
+}
+.abf-popup-form > div > div > input{
+    height:30px;
+}
+.abf-popup-form > button[type="submit"]{
+    padding:1em 1.75em;
+    color:white;
+    background:#F07241;
+    outline: none;
+    border:none;
+}
+/* Styling for close button */
+.modal-close {
+    color: #aaa;
+    font-size: 30px;
+    font-weight: 500;
+    position:absolute;
+    top:0;
+    right:.5em;
+    }
+    .modal-close:hover,
+    .modal-close:focus {
+    color: #111F2E;
+    text-decoration: none;
+    cursor: pointer;
+}
+.erase-button{
+    border:2px solid black;
+    padding:.75em;
+    position:absolute;
+    left:50%;
+    top:25%;    
+}
+.erase-button:hover{
+    cursor:pointer;
+}
+/* Outer Modal Content Styling */
+.modal-content {
+    position: relative;
+    margin: 7% auto;
+    height:600px;
+    width: 75%;
+    animation-name: animatetop;
+    animation-duration: .75s;
+}
+/* Inner Modal Content Styling */
+.modal-inner {
+    height:80%;
+    width:100%;
+    display: flex;
+}
+.modal-left{
+    background-image:url("./girl.jpg");
+    background-size:cover;
+    background-position:left;
+    width:75%;
+    height:100%;
+}
+.modal-left-overlay{
+    width:100%;
+    height:100%;
+    background:rgba(90, 64, 153, .85);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding:1em;
+}
+.modal-left-overlay > h1{
+    width:40%;   
+    color:white;
+    font-size:24px;
+    font-weight:600;
+}
+.modal-right{
+    background:#5A4099;
+    width:25%;
+    height:100%;
+}
+/* Add Animation */
+@keyframes animatetop {
+    from {top: -600px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+@media (max-width: 1024px) {
+/* Selectors and styles affecting screens UP TO 1024px (Large Tablet/Desktop) */
+.modal-content{
+    width:80%;
+    height:500px;
+}
+}
+@media (max-width: 768px) {
+/* Selectors and styles affecting screens UP TO 768px (Small Tablet) */
+   .modal-content{
+       height:auto;
+   }
+   .modal-inner{
+       flex-direction: column;
+   }
+   .modal-left,.modal-right{
+       width:100% !important;
+   }
+   .modal-left-overlay > h1{
+       font-size:1.25em;
+       font-family:inherit;
+   }
+}
+@media (max-width: 500px) {
+/* Selectors and styles affecting screens UP TO 480px (Phone) */
+  
+}
