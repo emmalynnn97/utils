@@ -114,7 +114,7 @@
 @media (max-width: 1024px) {
 /* Selectors and styles affecting screens UP TO 1024px (Large Tablet/Desktop) */
 .modal-content{
-    width:80%;
+    width:81%;
     height:500px;
 }
 }
